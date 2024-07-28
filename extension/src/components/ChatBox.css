@@ -1,43 +1,59 @@
 .chatbox {
-    padding: 20px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
-  }
-  
-  .chat-messages {
-    margin-bottom: 20px;
-    max-height: 200px;
-    overflow-y: auto;
-  }
-  
-  .chat-message {
-    padding: 10px;
-    background: #f1f1f1;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  input {
-    width: calc(100% - 60px);
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.chat-messages {
+  margin-bottom: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  padding: 10px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: calc(100% - 60px);
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* New styles for captions display */
+.captions {
+  margin-top: 20px;
+}
+
+.caption {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.caption strong {
+  display: block;
+  margin-bottom: 5px;
+}
