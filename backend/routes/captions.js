@@ -1,9 +1,8 @@
 const express = require('express');
+const { fetchSummary } = require('../controllers/captionsController');
 const router = express.Router();
 
-// Mock endpoint for captions
-router.get('/', (req, res) => {
-  res.json({ message: 'Captions API endpoint' });
-});
+router.get('/', fetchSummary);
 
 module.exports = router;
+
