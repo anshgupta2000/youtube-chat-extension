@@ -16,6 +16,8 @@
     "express": "^4.19.2",
     "googleapis": "^140.0.1",
     "mongoose": "^8.5.1",
+    "node-fetch": "^3.3.2",
+    "youtube-caption-extractor": "^1.4.3",
     "youtube-transcript": "^1.2.1"
   }
 }
