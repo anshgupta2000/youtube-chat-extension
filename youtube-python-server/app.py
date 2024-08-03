@@ -4,7 +4,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from anthropic import Anthropic
 
 app = Flask(__name__)
-client = Anthropic(api_key="_____________")
+client = Anthropic(api_key="__")
 
 def summarize_video(transcript):
     prompt = f"""
@@ -52,23 +52,3 @@ def get_summary():
 if __name__ == '__main__':
     app.run(port=5002)
 
-
-# from flask import Flask, request, jsonify
-# from youtube_transcript_api import YouTubeTranscriptApi
-
-# app = Flask(__name__)
-
-# @app.route('/get_transcript', methods=['GET'])
-# def get_transcript():
-#     video_id = request.args.get('video_id')
-#     if not video_id:
-#         return jsonify({'error': 'Missing video_id parameter'}), 400
-
-#     try:
-#         transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=['en'])
-#         return jsonify(transcript)
-#     except Exception as e:
-#         return jsonify({'error': str(e)}), 500
-
-# if __name__ == '__main__':
-#     app.run(port=5002)  # Running on port 5002 to avoid conflicts with the Node.js server
