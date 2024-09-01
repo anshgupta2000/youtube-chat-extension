@@ -24,5 +24,4 @@ This Chrome extension provides quick and concise summaries of YouTube videos dir
 - Implements a content script to modify the YouTube page and handle user interactions
 - Styled to match YouTube's design for a native look and feel
 
-
-<img width="645" alt="Screenshot 2024-07-28 at 2 59 58 AM" src="https://github.com/user-attachments/assets/a9494fc5-f087-4ca7-982b-7efb229604d6">
+<img width="1488" alt="Screenshot 2024-09-01 at 5 09 34 PM" src="https://github.com/user-attachments/assets/870baaa5-2b16-450c-915e-36ee864b3c86">
