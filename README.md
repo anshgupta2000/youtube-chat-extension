@@ -1,7 +1,28 @@
-# youtube-chat-extension
-Chrome extension for chat feature while watching Youtube videos
+# YouTube Video Summarizer Chrome Extension
 
-Currently works as a Youtube Summarizer app. We have used Claude Sonnet and YouTubeTranscriptApi to create this app.
+## Overview
+This Chrome extension provides quick and concise summaries of YouTube videos directly on the YouTube page. It allows users to get the main points of a video without watching the entire content, saving time and improving video content accessibility.
+
+## Features
+- Adds a "YT Summarizer" button to YouTube pages
+- Generates summaries for YouTube videos using AI
+- Displays summaries in a sleek, slide-out panel
+- Works with the current video or any YouTube URL input by the user
+- Integrates seamlessly with the YouTube interface
+
+## How It Works
+1. The extension injects a button onto YouTube pages
+2. When clicked, a panel slides out from the right side of the screen
+3. Users can enter a YouTube URL or use the current video's URL
+4. Clicking "Get Summary" sends the video ID to a backend server
+5. The server processes the video and returns a concise summary
+6. The summary is displayed in the panel for easy reading
+
+## Technical Details
+- Built as a Chrome extension using JavaScript, HTML, and CSS
+- Uses a background script to handle API calls to the backend server
+- Implements a content script to modify the YouTube page and handle user interactions
+- Styled to match YouTube's design for a native look and feel
 
 
 <img width="645" alt="Screenshot 2024-07-28 at 2 59 58 AM" src="https://github.com/user-attachments/assets/a9494fc5-f087-4ca7-982b-7efb229604d6">
