@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Video Summarizer",
+    "version": "1.0",
+    "description": "Summarize YouTube videos",
+    "permissions": [
+      "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+      },
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["contentScript.js"],
+        "css": ["contentScript.css"]
+      }
+    ],
+    "icons": {
+      "48": "icons/icon48.png"
+    }
+  }
