@@ -3,6 +3,9 @@
 ## Overview
 The YouTube Video Summarizer is a powerful Chrome extension that enhances your YouTube viewing experience by providing a live chat, AI-generated summaries, key insights, and interactive video sections. Leveraging the capabilities of OpenAI's Claude model, this extension offers a seamless way to quickly grasp the content of any YouTube video without watching it in its entirety.
 
+<img width="1486" alt="Screenshot 2024-09-14 at 1 47 41 AM" src="https://github.com/user-attachments/assets/9b24e980-cb84-44bf-8bd5-7d9d03675e21">
+
+
 ## Key Features
 - **AI-Powered Q&A**: Ask questions about the video content and receive intelligent responses.
 - **Video Summaries**: Get concise summaries of YouTube videos with just one click.
@@ -36,6 +39,6 @@ The YouTube Video Summarizer is a powerful Chrome extension that enhances your Y
 - Collaborative note-taking features
 
 
-<img width="1486" alt="Screenshot 2024-09-14 at 1 47 41 AM" src="https://github.com/user-attachments/assets/9b24e980-cb84-44bf-8bd5-7d9d03675e21">
+
 
 
