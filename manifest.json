@@ -4,7 +4,8 @@
     "version": "1.0",
     "description": "Summarize YouTube videos",
     "permissions": [
-      "activeTab"
+      "activeTab",
+      "storage"
     ],
     "background": {
         "service_worker": "background.js"
