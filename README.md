@@ -1,27 +1,38 @@
-# YouTube Video Summarizer Chrome Extension
+# YouTube Video Chat Chrome Extension
 
 ## Overview
-This Chrome extension provides quick and concise summaries of YouTube videos directly on the YouTube page. It allows users to get the main points of a video without watching the entire content, saving time and improving video content accessibility.
+The YouTube Video Summarizer is a powerful Chrome extension that enhances your YouTube viewing experience by providing a live chat, AI-generated summaries, key insights, and interactive video sections. Leveraging the capabilities of OpenAI's Claude model, this extension offers a seamless way to quickly grasp the content of any YouTube video without watching it in its entirety.
 
-## Features
-- Adds a "YT Summarizer" button to YouTube pages
-- Generates summaries for YouTube videos using AI
-- Displays summaries in a sleek, slide-out panel
-- Works with the current video or any YouTube URL input by the user
-- Integrates seamlessly with the YouTube interface
+## Key Features
+- **AI-Powered Q&A**: Ask questions about the video content and receive intelligent responses.
+- **Video Summaries**: Get concise summaries of YouTube videos with just one click.
+- **Key Insights**: Extract the most important points and ideas from the video content.
+- **Interactive Video Sections**: Navigate through the video using AI-generated section timestamps.
+- **Seamless Integration**: Works directly within the YouTube interface for a smooth user experience.
 
-## How It Works
-1. The extension injects a button onto YouTube pages
-2. When clicked, a panel slides out from the right side of the screen
-3. Users can enter a YouTube URL or use the current video's URL
-4. Clicking "Get Summary" sends the video ID to a backend server
-5. The server processes the video and returns a concise summary
-6. The summary is displayed in the panel for easy reading
+## Usage
+1. Navigate to any YouTube video.
+2. Click the YouTube Video Chat icon in the Chrome toolbar to open the extension panel.
+3. Use the following buttons to interact with the video content:
+  - **Summarize Video**: Generate a concise summary of the entire video.
+  - **Video Sections**: Get an overview of the video structure with clickable timestamps.
+  - **Key Insights**: Extract the main ideas and important points from the video.
+  - **Ask a Question**: Type your question about the video content to receive an AI-generated answer.
+  - 
+## Technologies Used
+- JavaScript
+- HTML/CSS
+- Chrome Extension APIs
+- Node.js
+- Express.js
+- Anthropic's Claude API
+- YouTube Caption Extractor
 
-## Technical Details
-- Built as a Chrome extension using JavaScript, HTML, and CSS
-- Uses a background script to handle API calls to the backend server
-- Implements a content script to modify the YouTube page and handle user interactions
-- Styled to match YouTube's design for a native look and feel
+## Future Improvements
+- Support for multiple languages
+- User-customizable summary length
+- Integration with more video platforms
+- Offline mode for previously summarized videos
+- Collaborative note-taking features
 
 <img width="1488" alt="Screenshot 2024-09-01 at 5 09 34 PM" src="https://github.com/user-attachments/assets/870baaa5-2b16-450c-915e-36ee864b3c86">
