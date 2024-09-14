@@ -35,4 +35,5 @@ The YouTube Video Summarizer is a powerful Chrome extension that enhances your Y
 - Offline mode for previously summarized videos
 - Collaborative note-taking features
 
-<img width="1488" alt="Screenshot 2024-09-01 at 5 09 34 PM" src="https://github.com/user-attachments/assets/870baaa5-2b16-450c-915e-36ee864b3c86">
+  
+<img width="352" alt="streamchat" src="https://github.com/user-attachments/assets/75811b19-c8d4-469a-9474-9be1ecc548b8">
