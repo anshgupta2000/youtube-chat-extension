@@ -1,130 +1,287 @@
-#yt-summarizer-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    z-index: 9999;
-    font-family: Arial, sans-serif;
-  }
-  
-  #yt-summarizer-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10000;
-  }
-  
-  #yt-summarizer-panel {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 350px;
-    height: 100vh;
-    background-color: white;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  #yt-summarizer-panel.hidden {
-    transform: translateX(100%);
-  }
-  
-  #yt-summarizer-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #f1f1f1;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  #yt-summarizer-header h3 {
-    margin: 0;
-  }
-  
-  #yt-summarizer-close {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  #yt-summarizer-content {
-    flex-grow: 1;
-    padding: 10px;
-    overflow-y: auto;
-  }
-  
-  #yt-summarizer-url {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-  }
-  
-  #yt-summarizer-submit {
-    width: 100%;
-    padding: 10px;
-    background-color: #4285f4;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  #yt-summarizer-result {
-    margin-top: 20px;
-  }
-  
-  #yt-summarizer-result h4 {
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-size: 18px;  
-  }
-  
-  #yt-summarizer-result p {
-    font-size: 16px;  
-    line-height: 1.5;  
-  }
+#yt-chat-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
 
-/* contentScript.css
+#yt-chat-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10000;
+  font-size: 16px;
+}
 
-#yt-summarizer-container {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 9999;
-  }
-  
-  #yt-summarizer-toggle {
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  #yt-summarizer-panel {
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 300px;
-  }
-  
-  #yt-summarizer-panel.hidden {
-    display: none;
-  }
-  
-  #yt-summarizer-url {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  #yt-summarizer-result {
-    margin-top: 10px;
-  } */
+#yt-chat-panel {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100vh;
+  background-color: #2b2b2b;
+  color: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease-in-out;
+}
+
+#yt-chat-panel.open {
+  right: 0;
+}
+
+#yt-chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+#yt-chat-header h3 {
+  margin: 0;
+  color: #ff0000;
+  font-size: 20px;
+}
+
+#yt-chat-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#yt-chat-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow: hidden;
+}
+
+#yt-chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  word-wrap: break-word;
+}
+
+#yt-chat-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #3a3a3a;
+  color: white;
+  border: 1px solid #4a4a4a;
+  font-size: 16px;
+}
+
+#yt-chat-send, #yt-chat-summarize, #yt-chat-sections, #yt-chat-key-insights {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#yt-chat-send:hover, #yt-chat-summarize:hover, #yt-chat-sections:hover, #yt-chat-key-insights:hover {
+  background-color: #cc0000;
+}
+
+.chat-message {
+  background-color: #3a3a3a;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 100%;
+}
+
+.chat-message pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  font-family: inherit;
+}
+
+#yt-chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+#yt-chat-messages::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+
+#yt-chat-messages::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#yt-chat-messages::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#yt-chat-actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.timestamp-link {
+  color: #1a73e8;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.timestamp-link:hover {
+  text-decoration: underline;
+}
+
+
+/*---------------------------------------------------------------------------------------------*/
+/* #yt-chat-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+#yt-chat-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10000;
+  font-size: 16px;
+}
+
+#yt-chat-panel {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100vh;
+  background-color: #2b2b2b;
+  color: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease-in-out;
+}
+
+#yt-chat-panel.open {
+  right: 0;
+}
+
+#yt-chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+#yt-chat-header h3 {
+  margin: 0;
+  color: #ff0000;
+  font-size: 20px;
+}
+
+#yt-chat-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#yt-chat-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow: hidden;
+}
+
+#yt-chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  word-wrap: break-word;
+}
+
+#yt-chat-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #3a3a3a;
+  color: white;
+  border: 1px solid #4a4a4a;
+  font-size: 16px;
+}
+
+#yt-chat-send, #yt-chat-summarize {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#yt-chat-send:hover, #yt-chat-summarize:hover {
+  background-color: #cc0000;
+}
+
+.chat-message {
+  background-color: #3a3a3a;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 100%;
+}
+
+#yt-chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+#yt-chat-messages::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+
+#yt-chat-messages::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#yt-chat-messages::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
