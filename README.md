@@ -1,7 +1,7 @@
-# YouTube Video Chat Chrome Extension
+# TubeChat AI
 
 ## Overview
-The YouTube Video Summarizer is a powerful Chrome extension that enhances your YouTube viewing experience by providing a live chat, AI-generated summaries, key insights, and interactive video sections. Leveraging the capabilities of OpenAI's Claude model, this extension offers a seamless way to quickly grasp the content of any YouTube video without watching it in its entirety.
+TubeChat AI is a powerful Chrome extension that enhances your YouTube viewing experience with AI-powered chat functionality. Engage in intelligent conversations about video content, get summaries, explore key insights, and navigate video sections effortlessly.
 
 <img width="1486" alt="Screenshot 2024-09-14 at 1 47 41 AM" src="https://github.com/user-attachments/assets/9b24e980-cb84-44bf-8bd5-7d9d03675e21">
 
