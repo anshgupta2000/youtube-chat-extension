@@ -8,18 +8,64 @@
   font-size: 16px;
 }
 
-#yt-chat-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background-color: #ff0000;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10000;
-  font-size: 16px;
+
+#yt-chat-container #yt-chat-toggle {
+  position: fixed !important;
+  top: calc(50% + 100px) !important;
+  right: 0 !important;
+  background-color: #ff0000 !important;
+  color: white !important;
+  border: none !important;
+  border-top-left-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  padding: 8px 12px 8px 16px !important;
+  cursor: pointer !important;
+  z-index: 9000 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  display: flex !important;
+  align-items: center !important;
+  transition: transform 0.3s ease-in-out, background-color 0.2s !important;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2) !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  outline: none !important;
+  text-align: left !important;
 }
+
+#yt-chat-container #yt-chat-toggle.hidden {
+  transform: translateX(100%) !important;
+}
+
+#yt-chat-container #yt-chat-toggle:hover {
+  background-color: #ff3333 !important;
+}
+
+#yt-chat-container #yt-chat-toggle svg {
+  margin-right: 8px !important;
+  width: 20px !important;
+  height: 20px !important;
+  fill: currentColor !important;
+  flex-shrink: 0 !important;
+}
+
+/* Adjust position when YouTube is in theater mode */
+body.ytd-watch-flexy[theater] #yt-chat-container #yt-chat-toggle {
+  top: calc(50% + 150px) !important;
+}
+
+/* Adjust position when YouTube is in fullscreen mode */
+:-webkit-full-screen #yt-chat-container #yt-chat-toggle {
+  top: calc(50% + 200px) !important;
+}
+
+:fullscreen #yt-chat-container #yt-chat-toggle {
+  top: calc(50% + 200px) !important;
+}
+
 
 #yt-chat-panel {
   position: fixed;
@@ -154,134 +200,3 @@
 
 
 /*---------------------------------------------------------------------------------------------*/
-/* #yt-chat-container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  z-index: 9999;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-}
-
-#yt-chat-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background-color: #ff0000;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10000;
-  font-size: 16px;
-}
-
-#yt-chat-panel {
-  position: fixed;
-  top: 0;
-  right: -350px;
-  width: 350px;
-  height: 100vh;
-  background-color: #2b2b2b;
-  color: white;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  transition: right 0.3s ease-in-out;
-}
-
-#yt-chat-panel.open {
-  right: 0;
-}
-
-#yt-chat-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background-color: #1f1f1f;
-  border-bottom: 1px solid #3a3a3a;
-}
-
-#yt-chat-header h3 {
-  margin: 0;
-  color: #ff0000;
-  font-size: 20px;
-}
-
-#yt-chat-close {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#yt-chat-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-  overflow: hidden;
-}
-
-#yt-chat-messages {
-  flex-grow: 1;
-  overflow-y: auto;
-  margin-bottom: 15px;
-  padding-right: 10px;
-  word-wrap: break-word;
-}
-
-#yt-chat-input {
-  width: calc(100% - 20px);
-  padding: 10px;
-  margin-bottom: 15px;
-  background-color: #3a3a3a;
-  color: white;
-  border: 1px solid #4a4a4a;
-  font-size: 16px;
-}
-
-#yt-chat-send, #yt-chat-summarize {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  background-color: #ff0000;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-#yt-chat-send:hover, #yt-chat-summarize:hover {
-  background-color: #cc0000;
-}
-
-.chat-message {
-  background-color: #3a3a3a;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  font-size: 16px;
-  line-height: 1.4;
-  max-width: 100%;
-}
-
-#yt-chat-messages::-webkit-scrollbar {
-  width: 8px;
-}
-
-#yt-chat-messages::-webkit-scrollbar-track {
-  background: #2b2b2b;
-}
-
-#yt-chat-messages::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-#yt-chat-messages::-webkit-scrollbar-thumb:hover {
-  background: #555;
-} */
